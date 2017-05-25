@@ -15,6 +15,17 @@
         <item name="contentInsetStart">12dp</item>
         <item name="titleTextAppearance">@style/TextAppearance.Shrine.Logo</item>
     </style>
+    
+    
+    <style name="Widget.Shrine.CollapsingToolbar" parent="">
+        <item name="collapsedTitleTextAppearance">@style/TextAppearance.Shrine.Logo</item>
+        <item name="contentScrim">?attr/colorPrimary</item>
+        <item name="expandedTitleGravity">top</item>
+        <item name="expandedTitleMarginStart">124dp</item>
+        <item name="expandedTitleMarginTop">140dp</item>
+        <item name="expandedTitleTextAppearance">@style/TextAppearance.Shrine.Logo</item>
+        <item name="scrimVisibleHeightTrigger">140dp</item>
+    </style>
 
 
 

@@ -30,6 +30,10 @@ class MainActivity : AppCompatActivity() {
 
         val imageRequester = ImageRequester.getInstance(this)
 
+        // this code is for headerProduct
+        val headerProduct = getHeaderPorduct(products)
+        imageRequester.setImageFromUrl(app_bar_image, headerProduct.url)
+
         product_list.setHasFixedSize(true)
         product_list.layoutManager = LinearLayoutManager(this)
         adapter = ProductAdapter(products, imageRequester)
@@ -37,6 +41,21 @@ class MainActivity : AppCompatActivity() {
 
 
 
+    }
+
+
+    private fun getHeaderPorduct(products: List<ProductEntry>): ProductEntry {
+
+        if (products.isEmpty()) {
+            throw IllegalArgumentException("There must be at least one product")
+        }
+
+        for (i in products.indices) {
+            if ("Perfect Goldfish Bowl" == products[i].title){
+                return products[i]
+            }
+        }
+        return products[0]
     }
 
     private fun  readProductsList(): ArrayList<ProductEntry> {
