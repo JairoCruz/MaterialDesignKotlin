@@ -69,6 +69,15 @@
 
     </android.support.design.widget.AppBarLayout>
 
+    <!--Add this view-->
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#ffffff"
+        android:theme="@style/ThemeOverlay.Shrine.BottomNavigation"
+        app:menu="@menu/shr_bottom_navigation"/>
 
 
 </android.support.design.widget.CoordinatorLayout>

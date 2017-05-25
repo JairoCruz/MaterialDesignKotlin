@@ -13,6 +13,7 @@ import com.android.volley.toolbox.NetworkImageView
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.IOException
+import java.util.*
 import kotlin.collections.ArrayList
 
 
@@ -38,6 +39,26 @@ class MainActivity : AppCompatActivity() {
         product_list.layoutManager = LinearLayoutManager(this)
         adapter = ProductAdapter(products, imageRequester)
         product_list.adapter = adapter
+
+
+        bottom_navigation.setOnNavigationItemSelectedListener {
+            val layoutManager = product_list.layoutManager as LinearLayoutManager
+            layoutManager.scrollToPositionWithOffset(0,0)
+            shuffleProducts()
+            true
+
+        }
+
+
+        bottom_navigation.setOnNavigationItemReselectedListener {
+            val layoutManager = product_list.layoutManager as LinearLayoutManager
+            layoutManager.scrollToPositionWithOffset(0,0)
+        }
+
+
+        if (savedInstanceState == null) {
+            bottom_navigation.selectedItemId = R.id.category_home
+        }
 
 
 
@@ -117,6 +138,13 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+    }
+
+
+    private fun shuffleProducts(){
+        val products = readProductsList()
+        Collections.shuffle(products)
+        adapter?.setProducts(products)
     }
 
 

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<item
+    android:id="@+id/category_clothing"
+    android:enabled="true"
+    android:title="@string/shr_cagetory_clothing"
+    android:icon="@drawable/ic_favorite_black_24dp"
+    app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/category_home"
+        android:enabled="true"
+        android:title="@string/shr_category_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/category_popsicles"
+        android:enabled="true"
+        android:title="@string/shr_category_popsicles"
+        android:icon="@drawable/ic_shopping_cart_black_24dp"
+        app:showAsAction="ifRoom"/>
+</menu>
