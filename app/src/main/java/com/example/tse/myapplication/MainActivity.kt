@@ -2,6 +2,7 @@ package com.example.tse.myapplication
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.util.Log
@@ -36,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         imageRequester.setImageFromUrl(app_bar_image, headerProduct.url)
 
         product_list.setHasFixedSize(true)
-        product_list.layoutManager = LinearLayoutManager(this)
+        product_list.layoutManager = GridLayoutManager(this, resources.getInteger(R.integer.shr_column_count))
         adapter = ProductAdapter(products, imageRequester)
         product_list.adapter = adapter
 
