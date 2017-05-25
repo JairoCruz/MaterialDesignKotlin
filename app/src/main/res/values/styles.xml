@@ -11,11 +11,17 @@
     </style>
 
 
+    <style name="Widget.Shrine.Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="contentInsetStart">12dp</item>
+        <item name="titleTextAppearance">@style/TextAppearance.Shrine.Logo</item>
+    </style>
+
+
 
     <style name="Widget.Shrine.CollapsingToolbarContent" parent="">
        <item name="android:layout_marginTop">160dp</item>
-        <item name="android:layout_marginStart">124dp</item>
-        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginLeft">124dp</item>
+        <item name="android:layout_marginRight">16dp</item>
         <item name="android:layout_gravity">top</item>
         <item name="android:orientation">vertical</item>
     </style>
