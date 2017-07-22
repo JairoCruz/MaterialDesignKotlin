@@ -7,6 +7,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
 
+
         <item name="toolbarStyle">@style/Widget.Shrine.Toolbar</item>
     </style>
 
@@ -25,6 +26,22 @@
         <item name="expandedTitleMarginTop">140dp</item>
         <item name="expandedTitleTextAppearance">@style/TextAppearance.Shrine.Logo</item>
         <item name="scrimVisibleHeightTrigger">140dp</item>
+    </style>
+
+
+    <style name="Widget.Shrine.CollapsingToolbarDetail" parent="Widget.Shrine.CollapsingToolbar">
+        <item name="expandedTitleMarginStart">16dp</item>
+        <item name="expandedTitleMarginTop">350dp</item>
+        <item name="scrimVisibleHeightTrigger">140dp</item>
+        <item name="expandedTitleGravity">top</item>
+    </style>
+
+    <style name="Widget.Shrine.CollapsingToolbarImageDetail" parent="">
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:layout_marginTop">38dp</item>
+        <item name="android:layout_marginBottom">38dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
     </style>
 
 

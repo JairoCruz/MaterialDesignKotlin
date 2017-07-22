@@ -7,9 +7,19 @@
         <item name="titleTextAppearance">@style/TextAppearance.Shrine.Logo</item>
     </style>-->
 
+    <style name="Theme.Shrine" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+
+        <item name="toolbarStyle">@style/Widget.Shrine.Toolbar</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
 
     <style name="TextAppearance.Shrine.Logo" parent="TextAppearance.AppCompat.Display3">
-       <item name="android:letterSpacing">0.20</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textSize">22sp</item>
         <item name="android:textStyle">bold</item>
